@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIIYKII GAME HUB</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+}
+
+/* HEADER */
+header{
+    background:#111827;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+
+header h1{
+    color:#38bdf8;
+    margin:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* CONTAINER */
+.profile-container{
+    max-width:1000px;
+    margin:50px auto;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* ANIMATION */
+.banner{
+    width:100%;
+    max-width:850px;
+    height:280px;
+    margin:0 auto 30px auto;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    border:4px solid #38bdf8;
+    background:linear-gradient(to bottom,#38bdf8 0%, #0ea5e9 35%, #1e3a8a 100%);
+}
+
+.wave{
+    position:absolute;
+    bottom:0;
+    width:200%;
+    height:120px;
+    background:rgba(255,255,255,0.15);
+    border-radius:40%;
+    animation:waveMove 8s linear infinite;
+}
+
+.wave2{
+    bottom:20px;
+    opacity:0.5;
+    animation-duration:12s;
+}
+
+.ship{
+    position:absolute;
+    bottom:80px;
+    left:-200px;
+    font-size:90px;
+    animation:sail 12s linear infinite;
+}
+
+.cloud{
+    position:absolute;
+    color:white;
+    opacity:0.7;
+    font-size:40px;
+    animation:cloudMove 25s linear infinite;
+}
+
+.cloud2{
+    top:70px;
+    animation-duration:35s;
+    font-size:55px;
+}
+
+@keyframes sail{
+    0%{left:-200px;}
+    100%{left:100%;}
+}
+
+@keyframes waveMove{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+@keyframes cloudMove{
+    0%{left:-200px;}
+    100%{left:110%;}
+}
+
+/* TEXT */
+h2{
+    font-size:36px;
+}
+
+.bio{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+/* GAME CARDS */
+.games{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:40px;
+}
+
+.game-card{
+    width:280px;
+    background:#111827;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.game-card:hover{
+    transform:translateY(-10px);
+}
+
+.game-image{
+    height:160px;
+    background:linear-gradient(135deg,#0ea5e9,#1d4ed8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:70px;
+}
+
+.game-info{
+    padding:20px;
+}
+
+.game-info h3{
+    margin-top:0;
+}
+
+.play-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 24px;
+    background:#0ea5e9;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.play-btn:hover{
+    background:#0284c7;
+}
+
+footer{
+    margin-top:50px;
+    padding:20px;
+    color:#94a3b8;
+}
+
+@media(max-width:700px){
+    .banner{
+        height:220px;
+    }
+
+    .ship{
+        font-size:65px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SIIYKII GAME HUB</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<div class="profile-container">
+
+    <div class="banner">
+
+        <div class="cloud">☁️ ☁️ ☁️</div>
+        <div class="cloud cloud2">☁️ ☁️</div>
+
+        <div class="ship">⛵</div>
+
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
+
+    </div>
+
+    <h2>WELCOME TO SIIYKII</h2>
+
+    <p class="bio">
+        Selamat datang di SIIYKII Game Hub.
+        Website game modern bertema petualangan laut dan anime
+        dengan mini games yang bisa dimainkan langsung di browser.
+    </p>
+
+    <div class="games" id="games">
+
+        <div class="game-card">
+
+            <div class="game-image">
+                🐍
+            </div>
+
+            <div class="game-info">
+                <h3>Snake Game</h3>
+
+                <p>
+                    Mainkan game ular klasik modern dengan score system.
+                </p>
+
+                <a class="play-btn" href="snake.html">
+                    PLAY GAME
+                </a>
+            </div>
+
+        </div>
+
+        <div class="game-card">
+
+            <div class="game-image">
+                ❌⭕
+            </div>
+
+            <div class="game-info">
+                <h3>Tic Tac Toe</h3>
+
+                <p>
+                    Bermain melawan teman dalam game klasik Tic Tac Toe.
+                </p>
+
+                <a class="play-btn" href="tictactoe.html">
+                    PLAY GAME
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+© 2026 SIIYKII GAME HUB
+</footer>
+
+</body>
+</html>
