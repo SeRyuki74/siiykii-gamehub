@@ -3,297 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIIYKII ANIME HUB</title>
+<title>SIIYKII HUB</title>
 
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" href="assets/images/logo.png">
+<link rel="stylesheet" href="css/style.css">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
-body{
-font-family:Arial,sans-serif;
-overflow-x:hidden;
-color:white;
-background:#020617;
-}
-
-.bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:url('background.jpg') center/cover no-repeat;
-filter:brightness(0.3) blur(2px);
-z-index:-2;
-}
-
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(to bottom,#00000066,#020617);
-z-index:-1;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 40px;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo-area img{
-width:70px;
-height:70px;
-animation:floatLogo 4s ease-in-out infinite;
-filter:drop-shadow(0 0 20px rgba(255,255,255,0.6));
-}
-
-.logo-text{
-font-size:34px;
-font-weight:bold;
-color:#38bdf8;
-text-shadow:0 0 15px #38bdf8;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:bold;
-}
-
-.hero{
-max-width:1300px;
-margin:auto;
-padding:50px 20px;
-text-align:center;
-}
-
-.banner{
-position:relative;
-height:420px;
-border-radius:30px;
-overflow:hidden;
-background:linear-gradient(to bottom,#38bdf844,#1d4ed855);
-backdrop-filter:blur(5px);
-border:2px solid rgba(255,255,255,0.15);
-box-shadow:0 0 40px rgba(56,189,248,0.3);
-}
-
-.ship{
-position:absolute;
-bottom:10px;
-left:-400px;
-width:380px;
-animation:sail 18s linear infinite;
-filter:drop-shadow(0 0 20px rgba(255,255,255,0.5));
-}
-
-.watermark{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:220px;
-opacity:0.08;
-animation:spin 30s linear infinite;
-}
-
-.light{
-position:absolute;
-top:40px;
-right:100px;
-width:220px;
-height:220px;
-background:#fde04766;
-border-radius:50%;
-filter:blur(45px);
-}
-
-.hero h1{
-margin-top:40px;
-font-size:68px;
-text-shadow:0 0 20px rgba(255,255,255,0.4);
-}
-
-.hero p{
-max-width:850px;
-margin:20px auto;
-line-height:1.9;
-font-size:20px;
-color:#e2e8f0;
-}
-
-.games{
-max-width:1200px;
-margin:70px auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
-padding:20px;
-}
-
-.card{
-background:rgba(15,23,42,0.85);
-border-radius:25px;
-overflow:hidden;
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.08);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-12px) scale(1.03);
-box-shadow:0 0 35px rgba(56,189,248,0.5);
-}
-
-.card-top{
-height:220px;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:100px;
-background:linear-gradient(135deg,#0ea5e9,#1d4ed8);
-}
-
-.card-content{
-padding:30px;
-text-align:center;
-}
-
-.play-btn{
-display:inline-block;
-padding:14px 30px;
-background:#0ea5e9;
-border-radius:15px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-margin-top:20px;
-}
-
-footer{
-text-align:center;
-padding:30px;
-margin-top:60px;
-background:rgba(0,0,0,0.4);
-}
-
-@keyframes sail{
-0%{left:-400px;transform:translateY(0px) rotate(-2deg);}
-25%{transform:translateY(-10px) rotate(2deg);}
-50%{transform:translateY(5px) rotate(-2deg);}
-75%{transform:translateY(-8px) rotate(2deg);}
-100%{left:110%;transform:translateY(0px) rotate(-2deg);}
-}
-
-@keyframes spin{
-0%{transform:translate(-50%,-50%) rotate(0deg);}
-100%{transform:translate(-50%,-50%) rotate(360deg);}
-}
-
-@keyframes floatLogo{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-8px);}
-100%{transform:translateY(0px);}
-}
-</style>
 </head>
-
 <body>
 
-<div class="bg"></div>
 <div class="overlay"></div>
 
 <header>
+    <div class="logo-box">
+        <img src="assets/images/logo.png">
+        <div>
+            <h1>SIIYKII HUB</h1>
+            <p>ANIME GAME PORTAL</p>
+        </div>
+    </div>
 
-<div class="logo-area">
-<img src="logo.png">
-<div class="logo-text">SIIYKII HUB</div>
-</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#games">Games</a>
-<a href="#">One Piece</a>
-<a href="#">About</a>
-</nav>
-
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#games">GAMES</a>
+        <a href="#">ONE PIECE</a>
+        <a href="#">ABOUT</a>
+    </nav>
 </header>
 
 <section class="hero">
 
-<div class="banner">
+    <div class="left">
 
-<div class="light"></div>
+        <h2>WELCOME TO</h2>
+        <h1>SIIYKII HUB ⚓</h1>
 
-<img src="logo.png" class="watermark">
+        <div class="line"></div>
 
-<img src="sunny.png" class="ship">
+        <p>
+            Portal game anime modern bertema One Piece dengan efek cinematic,
+            glow neon, dan mini games yang bisa dimainkan langsung di browser.
+        </p>
 
-</div>
+        <h3>🎮 PLAY GAMES</h3>
 
-<h1>WELCOME TO SIIYKII</h1>
+        <div class="games" id="games">
 
-<p>
-Portal game anime modern bertema One Piece dengan efek cinematic,
-logo custom, dan mini games yang bisa dimainkan langsung di browser.
-</p>
+            <div class="card blue">
+                <div class="emoji">🐍</div>
+
+                <h2>SNAKE GAME</h2>
+
+                <p>
+                    Mainkan game ular modern dengan tampilan neon.
+                </p>
+
+                <a href="snake.html">PLAY NOW</a>
+            </div>
+
+            <div class="card pink">
+                <div class="emoji">❌⭕</div>
+
+                <h2>TIC TAC TOE</h2>
+
+                <p>
+                    Bermain melawan teman dalam game klasik modern.
+                </p>
+
+                <a href="tictactoe.html">PLAY NOW</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <img src="assets/images/sunny.png" class="ship">
+
+    </div>
 
 </section>
 
-<section class="games" id="games">
-
-<div class="card">
-<div class="card-top">🐍</div>
-
-<div class="card-content">
-<h2>Snake Game</h2>
-
-<p>
-Mainkan game ular modern dengan tampilan neon anime dan kontrol responsive.
-</p>
-
-<a class="play-btn" href="snake.html">PLAY NOW</a>
-
+<div class="sidebar">
+    <div class="side-btn">🏆</div>
+    <div class="side-btn">⭐</div>
+    <div class="side-btn">🎵</div>
 </div>
-</div>
-
-<div class="card">
-<div class="card-top">❌⭕</div>
-
-<div class="card-content">
-<h2>Tic Tac Toe</h2>
-
-<p>
-Bermain melawan teman dalam game klasik modern bertema anime.
-</p>
-
-<a class="play-btn" href="tictactoe.html">PLAY NOW</a>
-
-</div>
-</div>
-
-</section>
 
 <footer>
-© 2026 SIIYKII ANIME GAME HUB
+© 2026 SIIYKII HUB | ONE PIECE FOREVER ☠️
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
